@@ -1,0 +1,22 @@
+{
+  "name": "template-editor",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "parcel build index.js --public-url /app/template-editor --no-content-hash",
+    "serve": "parcel serve index.html -p 3001 --public-url /app/template-editor",
+    "clean": "rm -rf {dist,.cache,node_modules}",
+    "reinstall": "yarn clean && yarn install"
+  },
+  "devDependencies": {
+    "elm-analyse": "^0.16.5",
+    "elm-hot": "^1.0.1",
+    "node-elm-compiler": "^5.0.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1"
+  }
+}

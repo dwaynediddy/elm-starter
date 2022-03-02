@@ -1,0 +1,173 @@
+@use 'canvas-guides';
+@use 'toolbars';
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+#template-editor-app-container {
+  overflow: auto;
+  padding: 0 100px;
+}
+
+#canvas-container {
+  position: relative;
+  margin: 100px auto;
+  background-color: #fff;
+  transform-origin: 0 0 0;
+}
+
+#template-canvas {
+  transform-origin: 0 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:hover > .bleed-margin-hover-target {
+    background-color: #96adfd;
+  }
+}
+
+#content-area {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 999;
+
+  &:hover ~ .bleed-margin-hover-target {
+    background-color: transparent;
+  }
+}
+
+.drag-target {
+  cursor: grab;
+  height: 38px;
+  left: -40px;
+  position: absolute;
+  top: -28px;
+  width: 38px;
+
+  i {
+    color: #bbb;
+    font-size: 36px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.dragging .drag-target {
+  cursor: grabbing;
+}
+
+.text-node {
+  border: 2px solid transparent;
+  font-size: 46px;
+  position: absolute;
+
+  &.active,
+  &:hover {
+    border: 2px solid #2190DB;
+  }
+
+  textarea {
+    background: transparent;
+    border: none;
+    height: 100%;
+    left: 0;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    resize: none;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.image-node {
+  border: 2px solid transparent;
+  position: absolute;
+
+  &.active,
+  &:hover {
+    border: 2px solid #2190DB;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    &[src^=data] {
+      opacity: .5;
+    }
+  }
+}
+
+.resize-target {
+  background: #fff;
+  border: 1px solid blue;
+  bottom: -10px;
+  cursor: nwse-resize;
+  height: 22px;
+  position: absolute;
+  right: -10px;
+  width: 22px;
+  z-index: 100;
+}
+
+#paginator {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+
+  span { pointer-events: none; }
+
+  i {
+    color: #666;
+    cursor: pointer;
+    &:hover { color: #000; }
+    &:first-child { margin-right: 20px; }
+    &:last-child { margin-left: 20px; }
+  }
+}
+
+#enter-email-modal input {
+  border-radius: 0;
+  width: 100%;
+}
+
+.saving {
+  cursor: default;
+}
+
+i.fa.fa-fw.fa-spinner {
+  animation:spin .6s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}
