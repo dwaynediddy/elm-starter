@@ -2,8 +2,18 @@ module Main exposing (main)
 
 import Browser
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
+
+main : Program Flags Model Msg
+main = Browser.element
+  { init = init
+  , subscriptions = subscriptions
+  , update = update
+  , view = view
+  }
+  
 type Msg
   = NoOp
   | MakeTheNumberBigger
@@ -17,13 +27,6 @@ type alias Model =
 
 type alias Flags = ()
 
-main : Program Flags Model Msg
-main = Browser.element
-  { init = init
-  , subscriptions = subscriptions
-  , update = update
-  , view = view
-  }
 
 subscriptions : Model -> Sub Msg
 subscriptions model = Sub.none
@@ -37,7 +40,7 @@ init flags =
 view : Model -> Html Msg
 view model =
   div []
-    [ text "HELLO OOOHHHH SHIT!"
+    [ text "HELLO"
     , p [] [ text ("My number is: " ++ String.fromInt model.someNumber)]
     , button [ onClick MakeTheNumberBigger ] [ text "MAKE BIGGER" ]
     ]
