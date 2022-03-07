@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (onClick)
+import Html.Events exposing (onClick, onCheck)
 
 
 main : Program Flags Model Msg
@@ -17,7 +17,7 @@ main = Browser.element
 type Msg = SetQuestion Quiz
 
 type Quiz = Start 
-  | QuestionOne 
+  | QuestionOne
   | QuestionTwo 
   | QuestionThree 
   | QuestionFour 
@@ -70,6 +70,23 @@ view model = case model.current of
         [
         h2 [] [text "question One"]
         , div [][text ""]
+        , h3 [][text "Who is the best Rugby team in Poland?"]
+        ,div [] [
+        label [] [text "Ogniwo"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Lodz"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Lublin"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Skra"]
+        , input [type_ "radio"][]
+        ]
         , button [onClick (SetQuestion QuestionTwo)][text "submit"]
         ]
     QuestionTwo ->
@@ -77,6 +94,23 @@ view model = case model.current of
         [
         h2 [] [text "Question Two"]
         , div [][text ""]
+        , h3 [][text "Which Hero dies in the fellowship of the ring??"]
+        ,div [] [
+        label [] [text "Gandelf"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Gimli"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Pippin"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Boromir"]
+        , input [type_ "radio"][]
+        ]
         , button [onClick (SetQuestion QuestionThree)][text "submit"]
         ]
     QuestionThree ->
@@ -84,6 +118,23 @@ view model = case model.current of
         [
         h2 [] [text "Question Three"]
         , div [][text ""]
+        , h3 [][text "where was jezen born?"]
+        ,div [] [
+        label [] [text "Poland"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "England"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Jerusalem"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Straya"]
+        , input [type_ "radio"][]
+        ]
         , button [onClick (SetQuestion QuestionFour)][text "submit"]
         ]
     QuestionFour->
@@ -91,6 +142,23 @@ view model = case model.current of
         [
         h2 [] [text "Question Four"]
         , div [][text ""]
+        , h3 [][text "wWhich chess piece can ONLY move diagonally?"]
+        ,div [] [
+        label [] [text "Bishop"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Queen"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Knight"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Rook"]
+        , input [type_ "radio"][]
+        ]
         , button [onClick (SetQuestion QuestionFive)][text "submit"]
         ]
     QuestionFive ->
@@ -98,7 +166,24 @@ view model = case model.current of
         [
         h2 [] [text "Question Five"]
         , div [][text ""]
-        , button [onClick (SetQuestion Results)][text "View Resdults"]
+        , h3 [][text "Who is the Black Mamba"]
+        ,div [] [
+        label [] [text "Lebron James"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Kobe Bryant"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Michael Jordan"]
+        , input [type_ "radio"][]
+        ]
+        ,div [] [
+        label [] [text "Shaq"]
+        , input [type_ "radio"][]
+        ]
+        , button [onClick (SetQuestion Results)][text "View Results"]
         ]
     Results ->
       div [class "resultsPage"]
