@@ -10656,10 +10656,10 @@ var $elm$core$Basics$never = function (_v0) {
 	}
 };
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$Home = {$: 'Home'};
+var $author$project$Main$Start = {$: 'Start'};
 var $author$project$Main$init = function (flags) {
 	return _Utils_Tuple2(
-		{currentPage: $author$project$Main$Home, someNumber: 0},
+		{current: $author$project$Main$Start},
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
@@ -10667,50 +10667,314 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $author$project$Main$subscriptions = function (model) {
 	return $elm$core$Platform$Sub$none;
 };
+var $author$project$Main$QuestionFive = {$: 'QuestionFive'};
+var $author$project$Main$QuestionFour = {$: 'QuestionFour'};
+var $author$project$Main$QuestionOne = {$: 'QuestionOne'};
+var $author$project$Main$QuestionThree = {$: 'QuestionThree'};
+var $author$project$Main$QuestionTwo = {$: 'QuestionTwo'};
+var $author$project$Main$Results = {$: 'Results'};
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		if (msg.$ === 'NoOp') {
-			return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
-		} else {
-			return _Utils_Tuple2(
-				_Utils_update(
-					model,
-					{someNumber: model.someNumber + 1}),
-				$elm$core$Platform$Cmd$none);
+		switch (msg.a.$) {
+			case 'Start':
+				var _v1 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$Start}),
+					$elm$core$Platform$Cmd$none);
+			case 'QuestionOne':
+				var _v2 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$QuestionOne}),
+					$elm$core$Platform$Cmd$none);
+			case 'QuestionTwo':
+				var _v3 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$QuestionTwo}),
+					$elm$core$Platform$Cmd$none);
+			case 'QuestionThree':
+				var _v4 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$QuestionThree}),
+					$elm$core$Platform$Cmd$none);
+			case 'QuestionFour':
+				var _v5 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$QuestionFour}),
+					$elm$core$Platform$Cmd$none);
+			case 'QuestionFive':
+				var _v6 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$QuestionFive}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				var _v7 = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{current: $author$project$Main$Results}),
+					$elm$core$Platform$Cmd$none);
 		}
 	});
-var $author$project$Main$MakeTheNumberBigger = {$: 'MakeTheNumberBigger'};
+var $author$project$Main$SetQuestion = function (a) {
+	return {$: 'SetQuestion', a: a};
+};
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $author$project$Main$view = function (model) {
-	return A2(
-		$elm$html$Html$div,
-		_List_Nil,
-		_List_fromArray(
-			[
-				$elm$html$Html$text('HELLO'),
-				A2(
-				$elm$html$Html$p,
+	var _v0 = model.current;
+	switch (_v0.$) {
+		case 'Start':
+			return A2(
+				$elm$html$Html$div,
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text(
-						'My number is: ' + $elm$core$String$fromInt(model.someNumber))
-					])),
-				A2(
-				$elm$html$Html$button,
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Diddy Quiz')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$QuestionOne))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Start Quiz')
+							]))
+					]));
+		case 'QuestionOne':
+			return A2(
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Events$onClick($author$project$Main$MakeTheNumberBigger)
+						$elm$html$Html$Attributes$class('questionPage')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('MAKE BIGGER')
-					]))
-			]));
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('question One')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$QuestionTwo))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('submit')
+							]))
+					]));
+		case 'QuestionTwo':
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('questionPage')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Question Two')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$QuestionThree))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('submit')
+							]))
+					]));
+		case 'QuestionThree':
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('questionPage')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Question Three')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$QuestionFour))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('submit')
+							]))
+					]));
+		case 'QuestionFour':
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('questionPage')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Question Four')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$QuestionFive))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('submit')
+							]))
+					]));
+		case 'QuestionFive':
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('questionPage')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Question Five')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$Results))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('View Resdults')
+							]))
+					]));
+		default:
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('resultsPage')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h2,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Results')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('you scored')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$SetQuestion($author$project$Main$Start))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('return to Start')
+							]))
+					]));
+	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{init: $author$project$Main$init, subscriptions: $author$project$Main$subscriptions, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
-	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"NoOp":[],"MakeTheNumberBigger":[]}}}}})}});
+	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"SetQuestion":["Main.Quiz"]}},"Main.Quiz":{"args":[],"tags":{"Start":[],"QuestionOne":[],"QuestionTwo":[],"QuestionThree":[],"QuestionFour":[],"QuestionFive":[],"Results":[]}}}}})}});
 
 //////////////////// HMR BEGIN ////////////////////
 
@@ -22642,7 +22906,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62228" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51668" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
