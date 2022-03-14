@@ -8,6 +8,7 @@ import 'animate.css';
 // Styles
 require('./assets/styles/skeleton.css');
 require('./assets/styles/main.scss');
+require('./style.css')
 
 Elm.Main.init({
   node: document.getElementById('app'),

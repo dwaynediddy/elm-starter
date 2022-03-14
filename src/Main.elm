@@ -59,7 +59,7 @@ update msg model = case msg of
 view : Model -> Html Msg
 view model = case model.current of
     Start ->
-        div [] 
+        div [class "startPage"] 
         [
         h2 []
         [text "Diddy Quiz"]
@@ -68,26 +68,26 @@ view model = case model.current of
     QuestionOne ->
         div [class "questionPage"]
         [
-        h2 [] [text "question One"]
+        h2 [] [text "Question One"]
         , div [][text ""]
         , h3 [][text "Who is the best Rugby team in Poland?"]
-        ,div [] [
-        label [] [text "Ogniwo"]
-        , input [type_ "radio"][]
+        ,div [class "radioBtns"] [
+        label [class "label"] [text "Ogniwo"]
+        , input [name "q1", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Lodz"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Lodz"]
+        , input [name "q1", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Lublin"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Lublin"]
+        , input [name "q1", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Skra"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Skra"]
+        , input [name "q1", type_ "radio"][]
         ]
-        , button [onClick (SetQuestion QuestionTwo)][text "submit"]
+        , button [onClick (SetQuestion QuestionTwo)][text "Submit"]
         ]
     QuestionTwo ->
         div [class "questionPage"]
@@ -95,71 +95,71 @@ view model = case model.current of
         h2 [] [text "Question Two"]
         , div [][text ""]
         , h3 [][text "Which Hero dies in the fellowship of the ring??"]
-        ,div [] [
-        label [] [text "Gandelf"]
-        , input [type_ "radio"][]
+        ,div [class "radioBtns"] [
+        label [class "label"] [text "Gandelf"]
+        , input [name "q2", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Gimli"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Gimli"]
+        , input [name "q2", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Pippin"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Pippin"]
+        , input [name "q2", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Boromir"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Boromir"]
+        , input [name "q2", type_ "radio"][]
         ]
-        , button [onClick (SetQuestion QuestionThree)][text "submit"]
+        , button [onClick (SetQuestion QuestionThree)][text "Submit"]
         ]
     QuestionThree ->
         div [class "questionPage"]
         [
         h2 [] [text "Question Three"]
-        , div [][text ""]
+        , div [class "radioBtns"][text ""]
         , h3 [][text "where was jezen born?"]
         ,div [] [
-        label [] [text "Poland"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Poland"]
+        , input [name "q3", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "England"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "England"]
+        , input [name "q3", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Jerusalem"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Jerusalem"]
+        , input [name "q3", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Straya"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Straya"]
+        , input [name "q3", type_ "radio"][]
         ]
-        , button [onClick (SetQuestion QuestionFour)][text "submit"]
+        , button [onClick (SetQuestion QuestionFour)][text "Submit"]
         ]
     QuestionFour->
         div [class "questionPage"]
         [
         h2 [] [text "Question Four"]
-        , div [][text ""]
-        , h3 [][text "wWhich chess piece can ONLY move diagonally?"]
+        , div [class "radioBtns"][text ""]
+        , h3 [][text "Which chess piece can ONLY move diagonally?"]
         ,div [] [
-        label [] [text "Bishop"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Bishop"]
+        , input [name "q4", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Queen"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Queen"]
+        , input [name "q4", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Knight"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Knight"]
+        , input [name "q4", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Rook"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Rook"]
+        , input [name "q4", type_ "radio"][]
         ]
-        , button [onClick (SetQuestion QuestionFive)][text "submit"]
+        , button [onClick (SetQuestion QuestionFive)][text "Submit"]
         ]
     QuestionFive ->
         div [class "questionPage"]
@@ -167,21 +167,21 @@ view model = case model.current of
         h2 [] [text "Question Five"]
         , div [][text ""]
         , h3 [][text "Who is the Black Mamba"]
-        ,div [] [
-        label [] [text "Lebron James"]
-        , input [type_ "radio"][]
+        ,div [class "radioBtns"] [
+        label [class "label"] [text "Lebron James"]
+        , input [name "q5", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Kobe Bryant"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Kobe Bryant"]
+        , input [name "q5", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Michael Jordan"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Michael Jordan"]
+        , input [name "q5", type_ "radio"][]
         ]
         ,div [] [
-        label [] [text "Shaq"]
-        , input [type_ "radio"][]
+        label [class "label"] [text "Shaq"]
+        , input [name "q5", type_ "radio"][]
         ]
         , button [onClick (SetQuestion Results)][text "View Results"]
         ]
@@ -189,6 +189,6 @@ view model = case model.current of
       div [class "resultsPage"]
       [
         h2 [][text "Results"]
-        , div [] [text "you scored"]
+        , h4 [class "Results"] [text "you scored 5/5"]
         , button [onClick (SetQuestion Start)] [text "return to Start"]
       ]

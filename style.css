@@ -1,0 +1,58 @@
+.main {
+
+}
+
+h2 {
+    color: white;
+    background-color: blue;
+    width: 100vw;
+    height: 6rem;
+    text-align: center;
+}
+
+.resultsPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    height: 4rem;
+    width: 15rem;
+    background-color: blue;
+    color: white;
+    border-radius: 2rem;
+    border-color: grey;
+    transition: all .5s ease;
+}
+
+button:hover {
+    color: blue;
+    background-color: white;
+    border-color: blue;
+}
+
+.startPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.questionPage {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.label {
+    text-size: 1.5rem;
+}
+
+input {
+    height: 3rem;
+    width: 3rem;
+}

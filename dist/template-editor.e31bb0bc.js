@@ -10732,14 +10732,19 @@ var $author$project$Main$SetQuestion = function (a) {
 };
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
+var $elm$html$Html$h4 = _VirtualDom_node('h4');
 var $elm$html$Html$label = _VirtualDom_node('label');
+var $elm$html$Html$Attributes$name = $elm$html$Html$Attributes$stringProperty('name');
 var $author$project$Main$view = function (model) {
 	var _v0 = model.current;
 	switch (_v0.$) {
 		case 'Start':
 			return A2(
 				$elm$html$Html$div,
-				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('startPage')
+					]),
 				_List_fromArray(
 					[
 						A2(
@@ -10775,7 +10780,7 @@ var $author$project$Main$view = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('question One')
+								$elm$html$Html$text('Question One')
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -10793,12 +10798,18 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('radioBtns')
+							]),
 						_List_fromArray(
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Ogniwo')
@@ -10807,6 +10818,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q1'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10818,7 +10830,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Lodz')
@@ -10827,6 +10842,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q1'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10838,7 +10854,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Lublin')
@@ -10847,6 +10866,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q1'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10858,7 +10878,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Skra')
@@ -10867,6 +10890,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q1'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10880,7 +10904,7 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('submit')
+								$elm$html$Html$text('Submit')
 							]))
 					]));
 		case 'QuestionTwo':
@@ -10915,12 +10939,18 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('radioBtns')
+							]),
 						_List_fromArray(
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Gandelf')
@@ -10929,6 +10959,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q2'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10940,7 +10971,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Gimli')
@@ -10949,6 +10983,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q2'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10960,7 +10995,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Pippin')
@@ -10969,6 +11007,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q2'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -10980,7 +11019,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Boromir')
@@ -10989,6 +11031,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q2'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11002,7 +11045,7 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('submit')
+								$elm$html$Html$text('Submit')
 							]))
 					]));
 		case 'QuestionThree':
@@ -11023,7 +11066,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('radioBtns')
+							]),
 						_List_fromArray(
 							[
 								$elm$html$Html$text('')
@@ -11042,7 +11088,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Poland')
@@ -11051,6 +11100,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q3'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11062,7 +11112,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('England')
@@ -11071,6 +11124,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q3'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11082,7 +11136,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Jerusalem')
@@ -11091,6 +11148,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q3'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11102,7 +11160,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Straya')
@@ -11111,6 +11172,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q3'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11124,7 +11186,7 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('submit')
+								$elm$html$Html$text('Submit')
 							]))
 					]));
 		case 'QuestionFour':
@@ -11145,7 +11207,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('radioBtns')
+							]),
 						_List_fromArray(
 							[
 								$elm$html$Html$text('')
@@ -11155,7 +11220,7 @@ var $author$project$Main$view = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('wWhich chess piece can ONLY move diagonally?')
+								$elm$html$Html$text('Which chess piece can ONLY move diagonally?')
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11164,7 +11229,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Bishop')
@@ -11173,6 +11241,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q4'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11184,7 +11253,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Queen')
@@ -11193,6 +11265,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q4'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11204,7 +11277,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Knight')
@@ -11213,6 +11289,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q4'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11224,7 +11301,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Rook')
@@ -11233,6 +11313,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q4'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11246,7 +11327,7 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('submit')
+								$elm$html$Html$text('Submit')
 							]))
 					]));
 		case 'QuestionFive':
@@ -11281,12 +11362,18 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('radioBtns')
+							]),
 						_List_fromArray(
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Lebron James')
@@ -11295,6 +11382,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q5'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11306,7 +11394,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Kobe Bryant')
@@ -11315,6 +11406,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q5'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11326,7 +11418,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Michael Jordan')
@@ -11335,6 +11430,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q5'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11346,7 +11442,10 @@ var $author$project$Main$view = function (model) {
 							[
 								A2(
 								$elm$html$Html$label,
-								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('label')
+									]),
 								_List_fromArray(
 									[
 										$elm$html$Html$text('Shaq')
@@ -11355,6 +11454,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$input,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$name('q5'),
 										$elm$html$Html$Attributes$type_('radio')
 									]),
 								_List_Nil)
@@ -11388,11 +11488,14 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$text('Results')
 							])),
 						A2(
-						$elm$html$Html$div,
-						_List_Nil,
+						$elm$html$Html$h4,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('you scored')
+								$elm$html$Html$Attributes$class('Results')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('you scored 5/5')
 							])),
 						A2(
 						$elm$html$Html$button,
@@ -23289,6 +23392,11 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -23311,11 +23419,13 @@ require('./assets/styles/skeleton.css');
 
 require('./assets/styles/main.scss');
 
+require('./style.css');
+
 _Main.Elm.Main.init({
   node: document.getElementById('app'),
   flags: {}
 });
-},{"./src/Main.elm":"src/Main.elm","jquery":"node_modules/jquery/dist/jquery.js","./notificationFx.js":"notificationFx.js","./notificationFx.css":"notificationFx.css","normalize.css":"node_modules/normalize.css/normalize.css","animate.css":"node_modules/animate.css/animate.css","./assets/styles/skeleton.css":"assets/styles/skeleton.css","./assets/styles/main.scss":"assets/styles/main.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/Main.elm":"src/Main.elm","jquery":"node_modules/jquery/dist/jquery.js","./notificationFx.js":"notificationFx.js","./notificationFx.css":"notificationFx.css","normalize.css":"node_modules/normalize.css/normalize.css","animate.css":"node_modules/animate.css/animate.css","./assets/styles/skeleton.css":"assets/styles/skeleton.css","./assets/styles/main.scss":"assets/styles/main.scss","./style.css":"style.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -23343,7 +23453,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51668" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58844" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
