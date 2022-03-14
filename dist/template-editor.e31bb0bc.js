@@ -10783,13 +10783,6 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$text('Question One')
 							])),
 						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text('')
-							])),
-						A2(
 						$elm$html$Html$h3,
 						_List_Nil,
 						_List_fromArray(
@@ -10800,7 +10793,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('radioBtns')
+								$elm$html$Html$Attributes$class('questionContainer')
 							]),
 						_List_fromArray(
 							[
@@ -10825,7 +10818,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -10849,7 +10845,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -10873,7 +10872,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -10924,13 +10926,6 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$text('Question Two')
 							])),
 						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text('')
-							])),
-						A2(
 						$elm$html$Html$h3,
 						_List_Nil,
 						_List_fromArray(
@@ -10941,7 +10936,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('radioBtns')
+								$elm$html$Html$Attributes$class('questionContainer')
 							]),
 						_List_fromArray(
 							[
@@ -10966,7 +10961,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -10990,7 +10988,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11014,7 +11015,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11068,7 +11072,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('radioBtns')
+								$elm$html$Html$Attributes$class('questionContainer')
 							]),
 						_List_fromArray(
 							[
@@ -11083,7 +11087,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11107,7 +11114,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11131,7 +11141,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11155,7 +11168,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11209,7 +11225,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('radioBtns')
+								$elm$html$Html$Attributes$class('questionContainer')
 							]),
 						_List_fromArray(
 							[
@@ -11224,7 +11240,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11248,7 +11267,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11272,7 +11294,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11296,7 +11321,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11347,13 +11375,6 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$text('Question Five')
 							])),
 						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text('')
-							])),
-						A2(
 						$elm$html$Html$h3,
 						_List_Nil,
 						_List_fromArray(
@@ -11364,7 +11385,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('radioBtns')
+								$elm$html$Html$Attributes$class('questionContainer')
 							]),
 						_List_fromArray(
 							[
@@ -11389,7 +11410,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11413,7 +11437,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(
@@ -11437,7 +11464,10 @@ var $author$project$Main$view = function (model) {
 							])),
 						A2(
 						$elm$html$Html$div,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('questionContainer')
+							]),
 						_List_fromArray(
 							[
 								A2(

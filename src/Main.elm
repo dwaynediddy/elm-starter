@@ -69,21 +69,20 @@ view model = case model.current of
         div [class "questionPage"]
         [
         h2 [] [text "Question One"]
-        , div [][text ""]
         , h3 [][text "Who is the best Rugby team in Poland?"]
-        ,div [class "radioBtns"] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Ogniwo"]
         , input [name "q1", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Lodz"]
         , input [name "q1", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Lublin"]
         , input [name "q1", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Skra"]
         , input [name "q1", type_ "radio"][]
         ]
@@ -93,21 +92,20 @@ view model = case model.current of
         div [class "questionPage"]
         [
         h2 [] [text "Question Two"]
-        , div [][text ""]
         , h3 [][text "Which Hero dies in the fellowship of the ring??"]
-        ,div [class "radioBtns"] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Gandelf"]
         , input [name "q2", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Gimli"]
         , input [name "q2", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Pippin"]
         , input [name "q2", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Boromir"]
         , input [name "q2", type_ "radio"][]
         ]
@@ -117,21 +115,21 @@ view model = case model.current of
         div [class "questionPage"]
         [
         h2 [] [text "Question Three"]
-        , div [class "radioBtns"][text ""]
+        , div [class "questionContainer"][text ""]
         , h3 [][text "where was jezen born?"]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Poland"]
         , input [name "q3", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "England"]
         , input [name "q3", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Jerusalem"]
         , input [name "q3", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Straya"]
         , input [name "q3", type_ "radio"][]
         ]
@@ -141,21 +139,21 @@ view model = case model.current of
         div [class "questionPage"]
         [
         h2 [] [text "Question Four"]
-        , div [class "radioBtns"][text ""]
+        , div [class "questionContainer"][text ""]
         , h3 [][text "Which chess piece can ONLY move diagonally?"]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Bishop"]
         , input [name "q4", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Queen"]
         , input [name "q4", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Knight"]
         , input [name "q4", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Rook"]
         , input [name "q4", type_ "radio"][]
         ]
@@ -165,21 +163,20 @@ view model = case model.current of
         div [class "questionPage"]
         [
         h2 [] [text "Question Five"]
-        , div [][text ""]
         , h3 [][text "Who is the Black Mamba"]
-        ,div [class "radioBtns"] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Lebron James"]
         , input [name "q5", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Kobe Bryant"]
         , input [name "q5", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Michael Jordan"]
         , input [name "q5", type_ "radio"][]
         ]
-        ,div [] [
+        , div [class "questionContainer"] [
         label [class "label"] [text "Shaq"]
         , input [name "q5", type_ "radio"][]
         ]
