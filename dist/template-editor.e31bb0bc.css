@@ -5909,20 +5909,18 @@ button:hover {
     flex-direction: column;
 }
 
-.questionContainer {
+
+.label {
     width: 24rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.label {
-    text-size: 1.5rem;
-}
-
 input {
     height: 3rem;
     width: 3rem;
+    justify-content: space-between;
 }
 
 /*# sourceMappingURL=/app/template-editor/template-editor.e31bb0bc.css.map */

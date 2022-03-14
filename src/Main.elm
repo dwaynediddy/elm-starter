@@ -71,20 +71,16 @@ view model = case model.current of
         h2 [] [text "Question One"]
         , h3 [][text "Who is the best Rugby team in Poland?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Ogniwo"]
-        , input [name "q1", type_ "radio"][]
+        label [class "label"] [text "Ogniwo", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lodz"]
-        , input [name "q1", type_ "radio"][]
+        label [class "label"] [text "Lodz", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lublin"]
-        , input [name "q1", type_ "radio"][]
+        label [class "label"] [text "Lublin", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Skra"]
-        , input [name "q1", type_ "radio"][]
+        label [class "label"] [text "Skra", input [name "q1", type_ "radio"][]]
         ]
         , button [onClick (SetQuestion QuestionTwo)][text "Submit"]
         ]
@@ -94,20 +90,16 @@ view model = case model.current of
         h2 [] [text "Question Two"]
         , h3 [][text "Which Hero dies in the fellowship of the ring??"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Gandelf"]
-        , input [name "q2", type_ "radio"][]
+        label [class "label"] [text "Gandelf", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Gimli"]
-        , input [name "q2", type_ "radio"][]
+        label [class "label"] [text "Gimli", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Pippin"]
-        , input [name "q2", type_ "radio"][]
+        label [class "label"] [text "Pippin", input [name "q1", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Boromir"]
-        , input [name "q2", type_ "radio"][]
+        label [class "label"] [text "Boromir", input [name "q1", type_ "radio"][]]
         ]
         , button [onClick (SetQuestion QuestionThree)][text "Submit"]
         ]
@@ -118,20 +110,16 @@ view model = case model.current of
         , div [class "questionContainer"][text ""]
         , h3 [][text "where was jezen born?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Poland"]
-        , input [name "q3", type_ "radio"][]
+        label [class "label"] [text "Poland", input [name "q3", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "England"]
-        , input [name "q3", type_ "radio"][]
+        label [class "label"] [text "England", input [name "q3", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Jerusalem"]
-        , input [name "q3", type_ "radio"][]
+        label [class "label"] [text "Jerusalem", input [name "q3", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Straya"]
-        , input [name "q3", type_ "radio"][]
+        label [class "label"] [text "Straya", input [name "q3", type_ "radio"][]]
         ]
         , button [onClick (SetQuestion QuestionFour)][text "Submit"]
         ]
@@ -142,20 +130,16 @@ view model = case model.current of
         , div [class "questionContainer"][text ""]
         , h3 [][text "Which chess piece can ONLY move diagonally?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Bishop"]
-        , input [name "q4", type_ "radio"][]
+        label [class "label"] [text "Bishop", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Queen"]
-        , input [name "q4", type_ "radio"][]
+        label [class "label"] [text "Queen", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Knight"]
-        , input [name "q4", type_ "radio"][]
+        label [class "label"] [text "Knight", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Rook"]
-        , input [name "q4", type_ "radio"][]
+        label [class "label"] [text "Rook", input [name "q4", type_ "radio"][]]
         ]
         , button [onClick (SetQuestion QuestionFive)][text "Submit"]
         ]
@@ -165,20 +149,16 @@ view model = case model.current of
         h2 [] [text "Question Five"]
         , h3 [][text "Who is the Black Mamba"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lebron James"]
-        , input [name "q5", type_ "radio"][]
+        label [class "label"] [text "Lebron James", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Kobe Bryant"]
-        , input [name "q5", type_ "radio"][]
+        label [class "label"] [text "Kobe Bryant", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Michael Jordan"]
-        , input [name "q5", type_ "radio"][]
+        label [class "label"] [text "Michael Jordan", input [name "q4", type_ "radio"][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Shaq"]
-        , input [name "q5", type_ "radio"][]
+        label [class "label"] [text "Shaq", input [name "q4", type_ "radio"][]]
         ]
         , button [onClick (SetQuestion Results)][text "View Results"]
         ]

@@ -10805,16 +10805,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Ogniwo')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q1'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Ogniwo'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -10832,16 +10832,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Lodz')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q1'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Lodz'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -10859,16 +10859,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Lublin')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q1'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Lublin'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -10886,16 +10886,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Skra')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q1'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Skra'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$button,
@@ -10948,16 +10948,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Gandelf')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q2'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Gandelf'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -10975,16 +10975,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Gimli')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q2'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Gimli'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11002,16 +11002,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Pippin')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q2'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Pippin'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11029,16 +11029,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Boromir')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q2'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Boromir'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q1'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$button,
@@ -11101,16 +11101,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Poland')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q3'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Poland'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q3'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11128,16 +11128,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('England')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q3'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('England'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q3'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11155,16 +11155,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Jerusalem')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q3'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Jerusalem'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q3'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11182,16 +11182,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Straya')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q3'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Straya'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q3'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$button,
@@ -11254,16 +11254,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Bishop')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q4'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Bishop'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11281,16 +11281,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Queen')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q4'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Queen'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11308,16 +11308,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Knight')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q4'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Knight'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11335,16 +11335,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Rook')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q4'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Rook'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$button,
@@ -11397,16 +11397,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Lebron James')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q5'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Lebron James'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11424,16 +11424,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Kobe Bryant')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q5'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Kobe Bryant'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11451,16 +11451,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Michael Jordan')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q5'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Michael Jordan'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$div,
@@ -11478,16 +11478,16 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Shaq')
-									])),
-								A2(
-								$elm$html$Html$input,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$name('q5'),
-										$elm$html$Html$Attributes$type_('radio')
-									]),
-								_List_Nil)
+										$elm$html$Html$text('Shaq'),
+										A2(
+										$elm$html$Html$input,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$name('q4'),
+												$elm$html$Html$Attributes$type_('radio')
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						$elm$html$Html$button,
