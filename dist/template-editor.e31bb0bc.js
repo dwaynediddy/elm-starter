@@ -10659,7 +10659,7 @@ var $elm$browser$Browser$element = _Browser_element;
 var $author$project$Main$Start = {$: 'Start'};
 var $author$project$Main$init = function (flags) {
 	return _Utils_Tuple2(
-		{answerOne: $elm$core$Maybe$Nothing, currentPage: $author$project$Main$Start},
+		{answerFive: $elm$core$Maybe$Nothing, answerFour: $elm$core$Maybe$Nothing, answerOne: $elm$core$Maybe$Nothing, answerThree: $elm$core$Maybe$Nothing, answerTwo: $elm$core$Maybe$Nothing, currentPage: $author$project$Main$Start},
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
@@ -10669,40 +10669,105 @@ var $author$project$Main$subscriptions = function (model) {
 };
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		if (msg.$ === 'SetPage') {
-			var page = msg.a;
-			return _Utils_Tuple2(
-				_Utils_update(
-					model,
-					{currentPage: page}),
-				$elm$core$Platform$Cmd$none);
-		} else {
-			var answer = msg.a;
-			return _Utils_Tuple2(
-				_Utils_update(
-					model,
-					{
-						answerOne: $elm$core$Maybe$Just(answer)
-					}),
-				$elm$core$Platform$Cmd$none);
+		switch (msg.$) {
+			case 'SetPage':
+				var page = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{currentPage: page}),
+					$elm$core$Platform$Cmd$none);
+			case 'SetAnswerOne':
+				var answer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							answerOne: $elm$core$Maybe$Just(answer)
+						}),
+					$elm$core$Platform$Cmd$none);
+			case 'SetAnswerTwo':
+				var answer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							answerTwo: $elm$core$Maybe$Just(answer)
+						}),
+					$elm$core$Platform$Cmd$none);
+			case 'SetAnswerThree':
+				var answer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							answerThree: $elm$core$Maybe$Just(answer)
+						}),
+					$elm$core$Platform$Cmd$none);
+			case 'SetAnswerFour':
+				var answer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							answerFour: $elm$core$Maybe$Just(answer)
+						}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				var answer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							answerFive: $elm$core$Maybe$Just(answer)
+						}),
+					$elm$core$Platform$Cmd$none);
 		}
 	});
+var $author$project$Main$Bishop = {$: 'Bishop'};
+var $author$project$Main$Boromir = {$: 'Boromir'};
+var $author$project$Main$England = {$: 'England'};
+var $author$project$Main$Gandelf = {$: 'Gandelf'};
+var $author$project$Main$Gimli = {$: 'Gimli'};
+var $author$project$Main$Jerusalem = {$: 'Jerusalem'};
+var $author$project$Main$Knight = {$: 'Knight'};
+var $author$project$Main$Kobe = {$: 'Kobe'};
+var $author$project$Main$Lebron = {$: 'Lebron'};
 var $author$project$Main$Lodz = {$: 'Lodz'};
 var $author$project$Main$Lublin = {$: 'Lublin'};
+var $author$project$Main$Mike = {$: 'Mike'};
 var $author$project$Main$Ogniwo = {$: 'Ogniwo'};
+var $author$project$Main$Pippin = {$: 'Pippin'};
+var $author$project$Main$Poland = {$: 'Poland'};
+var $author$project$Main$Queen = {$: 'Queen'};
 var $author$project$Main$QuestionFive = {$: 'QuestionFive'};
 var $author$project$Main$QuestionFour = {$: 'QuestionFour'};
 var $author$project$Main$QuestionOne = {$: 'QuestionOne'};
 var $author$project$Main$QuestionThree = {$: 'QuestionThree'};
 var $author$project$Main$QuestionTwo = {$: 'QuestionTwo'};
 var $author$project$Main$Results = {$: 'Results'};
+var $author$project$Main$Rook = {$: 'Rook'};
+var $author$project$Main$SetAnswerFive = function (a) {
+	return {$: 'SetAnswerFive', a: a};
+};
+var $author$project$Main$SetAnswerFour = function (a) {
+	return {$: 'SetAnswerFour', a: a};
+};
 var $author$project$Main$SetAnswerOne = function (a) {
 	return {$: 'SetAnswerOne', a: a};
+};
+var $author$project$Main$SetAnswerThree = function (a) {
+	return {$: 'SetAnswerThree', a: a};
+};
+var $author$project$Main$SetAnswerTwo = function (a) {
+	return {$: 'SetAnswerTwo', a: a};
 };
 var $author$project$Main$SetPage = function (a) {
 	return {$: 'SetPage', a: a};
 };
+var $author$project$Main$Shaq = {$: 'Shaq'};
 var $author$project$Main$Skra = {$: 'Skra'};
+var $author$project$Main$Straya = {$: 'Straya'};
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$h4 = _VirtualDom_node('h4');
@@ -10935,7 +11000,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerTwo($author$project$Main$Gandelf))
 											]),
 										_List_Nil)
 									]))
@@ -10962,7 +11029,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerTwo($author$project$Main$Gimli))
 											]),
 										_List_Nil)
 									]))
@@ -10989,7 +11058,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerTwo($author$project$Main$Pippin))
 											]),
 										_List_Nil)
 									]))
@@ -11016,7 +11087,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerTwo($author$project$Main$Boromir))
 											]),
 										_List_Nil)
 									]))
@@ -11088,7 +11161,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q3'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerThree($author$project$Main$Poland))
 											]),
 										_List_Nil)
 									]))
@@ -11115,7 +11190,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q3'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerThree($author$project$Main$England))
 											]),
 										_List_Nil)
 									]))
@@ -11142,7 +11219,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q3'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerThree($author$project$Main$Jerusalem))
 											]),
 										_List_Nil)
 									]))
@@ -11169,7 +11248,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q3'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerThree($author$project$Main$Straya))
 											]),
 										_List_Nil)
 									]))
@@ -11241,7 +11322,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFour($author$project$Main$Bishop))
 											]),
 										_List_Nil)
 									]))
@@ -11268,7 +11351,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFour($author$project$Main$Queen))
 											]),
 										_List_Nil)
 									]))
@@ -11295,7 +11380,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFour($author$project$Main$Knight))
 											]),
 										_List_Nil)
 									]))
@@ -11322,7 +11409,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFour($author$project$Main$Rook))
 											]),
 										_List_Nil)
 									]))
@@ -11384,7 +11473,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFive($author$project$Main$Lebron))
 											]),
 										_List_Nil)
 									]))
@@ -11411,7 +11502,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFive($author$project$Main$Kobe))
 											]),
 										_List_Nil)
 									]))
@@ -11438,7 +11531,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFive($author$project$Main$Mike))
 											]),
 										_List_Nil)
 									]))
@@ -11459,13 +11554,15 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Shaq'),
+										$elm$html$Html$text('Shaq Diesel'),
 										A2(
 										$elm$html$Html$input,
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q4'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerFive($author$project$Main$Shaq))
 											]),
 										_List_Nil)
 									]))
@@ -11525,7 +11622,7 @@ var $author$project$Main$view = function (model) {
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{init: $author$project$Main$init, subscriptions: $author$project$Main$subscriptions, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
-	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"SetPage":["Main.Page"],"SetAnswerOne":["Main.AnswerOne"]}},"Main.AnswerOne":{"args":[],"tags":{"Ogniwo":[],"Lodz":[],"Lublin":[],"Skra":[]}},"Main.Page":{"args":[],"tags":{"Start":[],"QuestionOne":[],"QuestionTwo":[],"QuestionThree":[],"QuestionFour":[],"QuestionFive":[],"Results":[]}}}}})}});
+	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"SetPage":["Main.Page"],"SetAnswerOne":["Main.AnswerOne"],"SetAnswerTwo":["Main.AnswerTwo"],"SetAnswerThree":["Main.AnswerThree"],"SetAnswerFour":["Main.AnswerFour"],"SetAnswerFive":["Main.AnswerFive"]}},"Main.AnswerFive":{"args":[],"tags":{"Lebron":[],"Kobe":[],"Mike":[],"Shaq":[]}},"Main.AnswerFour":{"args":[],"tags":{"Bishop":[],"Queen":[],"Knight":[],"Rook":[]}},"Main.AnswerOne":{"args":[],"tags":{"Ogniwo":[],"Lodz":[],"Lublin":[],"Skra":[]}},"Main.AnswerThree":{"args":[],"tags":{"Poland":[],"England":[],"Jerusalem":[],"Straya":[]}},"Main.AnswerTwo":{"args":[],"tags":{"Gandelf":[],"Gimli":[],"Pippin":[],"Boromir":[]}},"Main.Page":{"args":[],"tags":{"Start":[],"QuestionOne":[],"QuestionTwo":[],"QuestionThree":[],"QuestionFour":[],"QuestionFive":[],"Results":[]}}}}})}});
 
 //////////////////// HMR BEGIN ////////////////////
 

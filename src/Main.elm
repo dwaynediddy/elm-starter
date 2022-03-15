@@ -16,6 +16,10 @@ main = Browser.element
 
 type Msg = SetPage Page
   | SetAnswerOne AnswerOne
+  | SetAnswerTwo AnswerTwo
+  | SetAnswerThree AnswerThree
+  | SetAnswerFour AnswerFour
+  | SetAnswerFive AnswerFive
 
 
 
@@ -32,10 +36,34 @@ type AnswerOne = Ogniwo
     | Lublin
     | Skra
 
+type AnswerTwo = Gandelf
+    | Gimli
+    | Pippin
+    | Boromir
+
+type AnswerThree = Poland
+    | England
+    | Jerusalem
+    | Straya
+
+type AnswerFour = Bishop
+    | Queen
+    | Knight
+    | Rook
+
+type AnswerFive = Lebron
+    | Kobe
+    | Mike
+    | Shaq
+
 
 type alias Model =
   { currentPage : Page
   , answerOne : Maybe AnswerOne
+  , answerTwo : Maybe AnswerTwo
+  , answerThree : Maybe AnswerThree
+  , answerFour : Maybe AnswerFour
+  , answerFive : Maybe AnswerFive
   }
 
 type alias Flags = ()
@@ -46,7 +74,14 @@ subscriptions model = Sub.none
 
 init : Flags -> (Model, Cmd Msg)
 init flags =
-  ({ currentPage = Start, answerOne = Nothing }, Cmd.none)
+  ({ 
+    currentPage = Start
+  , answerOne = Nothing
+  , answerTwo = Nothing
+  , answerThree = Nothing
+  , answerFour = Nothing
+  , answerFive = Nothing
+ }, Cmd.none)
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model = case msg of
@@ -54,6 +89,14 @@ update msg model = case msg of
         ({ model | currentPage = page}, Cmd.none)
     SetAnswerOne answer ->
       ({ model | answerOne = Just answer }, Cmd.none)
+    SetAnswerTwo answer ->
+      ({ model | answerTwo = Just answer }, Cmd.none)
+    SetAnswerThree answer ->
+      ({ model | answerThree = Just answer }, Cmd.none)
+    SetAnswerFour answer ->
+      ({ model | answerFour = Just answer }, Cmd.none)
+    SetAnswerFive answer ->
+      ({ model | answerFive = Just answer }, Cmd.none)
 
 
 
@@ -91,16 +134,16 @@ view model = case model.currentPage of
         h2 [] [text "Question Two"]
         , h3 [][text "Which Hero dies in the fellowship of the ring??"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Gandelf", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Gandelf", input [name "q1", type_ "radio", onClick (SetAnswerTwo Gandelf)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Gimli", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Gimli", input [name "q1", type_ "radio", onClick (SetAnswerTwo Gimli)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Pippin", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Pippin", input [name "q1", type_ "radio", onClick (SetAnswerTwo Pippin)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Boromir", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Boromir", input [name "q1", type_ "radio", onClick (SetAnswerTwo Boromir)][]]
         ]
         , button [onClick (SetPage QuestionThree)][text "Submit"]
         ]
@@ -111,16 +154,16 @@ view model = case model.currentPage of
         , div [class "questionContainer"][text ""]
         , h3 [][text "where was jezen born?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Poland", input [name "q3", type_ "radio"][]]
+        label [class "label"] [text "Poland", input [name "q3", type_ "radio", onClick (SetAnswerThree Poland)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "England", input [name "q3", type_ "radio"][]]
+        label [class "label"] [text "England", input [name "q3", type_ "radio", onClick (SetAnswerThree England)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Jerusalem", input [name "q3", type_ "radio"][]]
+        label [class "label"] [text "Jerusalem", input [name "q3", type_ "radio", onClick (SetAnswerThree Jerusalem)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Straya", input [name "q3", type_ "radio"][]]
+        label [class "label"] [text "Straya", input [name "q3", type_ "radio", onClick (SetAnswerThree Straya)][]]
         ]
         , button [onClick (SetPage QuestionFour)][text "Submit"]
         ]
@@ -131,16 +174,16 @@ view model = case model.currentPage of
         , div [class "questionContainer"][text ""]
         , h3 [][text "Which chess piece can ONLY move diagonally?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Bishop", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Bishop", input [name "q4", type_ "radio", onClick (SetAnswerFour Bishop)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Queen", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Queen", input [name "q4", type_ "radio", onClick (SetAnswerFour Queen)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Knight", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Knight", input [name "q4", type_ "radio", onClick (SetAnswerFour Knight)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Rook", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Rook", input [name "q4", type_ "radio", onClick (SetAnswerFour Rook)][]]
         ]
         , button [onClick (SetPage QuestionFive)][text "Submit"]
         ]
@@ -150,16 +193,16 @@ view model = case model.currentPage of
         h2 [] [text "Question Five"]
         , h3 [][text "Who is the Black Mamba"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lebron James", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Lebron James", input [name "q4", type_ "radio", onClick (SetAnswerFive Lebron)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Kobe Bryant", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Kobe Bryant", input [name "q4", type_ "radio", onClick (SetAnswerFive Kobe)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Michael Jordan", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Michael Jordan", input [name "q4", type_ "radio", onClick (SetAnswerFive Mike)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Shaq", input [name "q4", type_ "radio"][]]
+        label [class "label"] [text "Shaq Diesel", input [name "q4", type_ "radio", onClick (SetAnswerFive Shaq)][]]
         ]
         , button [onClick (SetPage Results)][text "View Results"]
         ]
