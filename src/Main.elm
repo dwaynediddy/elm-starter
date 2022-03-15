@@ -14,9 +14,12 @@ main = Browser.element
   , view = view
   }
 
-type Msg = SetQuestion Quiz
+type Msg = SetPage Page
+  | SetAnswerOne AnswerOne
 
-type Quiz = Start 
+
+
+type Page = Start 
   | QuestionOne
   | QuestionTwo 
   | QuestionThree 
@@ -24,9 +27,16 @@ type Quiz = Start
   | QuestionFive
   | Results
 
+type AnswerOne = Ogniwo
+    | Lodz
+    | Lublin
+    | Skra
 
-type alias Model = { current : Quiz }
 
+type alias Model =
+  { currentPage : Page
+  , answerOne : Maybe AnswerOne
+  }
 
 type alias Flags = ()
 
@@ -36,34 +46,25 @@ subscriptions model = Sub.none
 
 init : Flags -> (Model, Cmd Msg)
 init flags =
-  ({ current = Start }, Cmd.none)
+  ({ currentPage = Start, answerOne = Nothing }, Cmd.none)
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model = case msg of
-    SetQuestion Start ->
-        ({ model | current = Start }, Cmd.none)
-    SetQuestion QuestionOne ->
-        ({ model | current = QuestionOne }, Cmd.none)
-    SetQuestion QuestionTwo ->
-        ({ model | current = QuestionTwo }, Cmd.none)
-    SetQuestion QuestionThree ->
-        ({ model | current = QuestionThree }, Cmd.none)
-    SetQuestion QuestionFour ->
-        ({ model | current = QuestionFour }, Cmd.none)
-    SetQuestion QuestionFive ->
-        ({ model | current = QuestionFive }, Cmd.none)
-    SetQuestion Results ->
-        ({ model | current = Results}, Cmd.none)
+    SetPage page ->
+        ({ model | currentPage = page}, Cmd.none)
+    SetAnswerOne answer ->
+      ({ model | answerOne = Just answer }, Cmd.none)
+
 
 
 view : Model -> Html Msg
-view model = case model.current of
+view model = case model.currentPage of
     Start ->
         div [class "startPage"] 
         [
         h2 []
         [text "Diddy Quiz"]
-        , button [onClick (SetQuestion QuestionOne)][text "Start Quiz"]
+        , button [onClick (SetPage QuestionOne)][text "Start Quiz"]
         ]
     QuestionOne ->
         div [class "questionPage"]
@@ -71,18 +72,18 @@ view model = case model.current of
         h2 [] [text "Question One"]
         , h3 [][text "Who is the best Rugby team in Poland?"]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Ogniwo", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Ogniwo", input [name "q1", type_ "radio", onClick (SetAnswerOne Ogniwo)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lodz", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Lodz", input [name "q1", type_ "radio", onClick (SetAnswerOne Lodz)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Lublin", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Lublin", input [name "q1", type_ "radio", onClick (SetAnswerOne Lublin)][]]
         ]
         , div [class "questionContainer"] [
-        label [class "label"] [text "Skra", input [name "q1", type_ "radio"][]]
+        label [class "label"] [text "Skra", input [name "q1", type_ "radio", onClick (SetAnswerOne Skra)][]]
         ]
-        , button [onClick (SetQuestion QuestionTwo)][text "Submit"]
+        , button [onClick (SetPage QuestionTwo)][text "Submit"]
         ]
     QuestionTwo ->
         div [class "questionPage"]
@@ -101,7 +102,7 @@ view model = case model.current of
         , div [class "questionContainer"] [
         label [class "label"] [text "Boromir", input [name "q1", type_ "radio"][]]
         ]
-        , button [onClick (SetQuestion QuestionThree)][text "Submit"]
+        , button [onClick (SetPage QuestionThree)][text "Submit"]
         ]
     QuestionThree ->
         div [class "questionPage"]
@@ -121,7 +122,7 @@ view model = case model.current of
         , div [class "questionContainer"] [
         label [class "label"] [text "Straya", input [name "q3", type_ "radio"][]]
         ]
-        , button [onClick (SetQuestion QuestionFour)][text "Submit"]
+        , button [onClick (SetPage QuestionFour)][text "Submit"]
         ]
     QuestionFour->
         div [class "questionPage"]
@@ -141,7 +142,7 @@ view model = case model.current of
         , div [class "questionContainer"] [
         label [class "label"] [text "Rook", input [name "q4", type_ "radio"][]]
         ]
-        , button [onClick (SetQuestion QuestionFive)][text "Submit"]
+        , button [onClick (SetPage QuestionFive)][text "Submit"]
         ]
     QuestionFive ->
         div [class "questionPage"]
@@ -160,12 +161,12 @@ view model = case model.current of
         , div [class "questionContainer"] [
         label [class "label"] [text "Shaq", input [name "q4", type_ "radio"][]]
         ]
-        , button [onClick (SetQuestion Results)][text "View Results"]
+        , button [onClick (SetPage Results)][text "View Results"]
         ]
     Results ->
       div [class "resultsPage"]
       [
         h2 [][text "Results"]
         , h4 [class "Results"] [text "you scored 5/5"]
-        , button [onClick (SetQuestion Start)] [text "return to Start"]
+        , button [onClick (SetPage Start)] [text "return to Start"]
       ]

@@ -10659,7 +10659,7 @@ var $elm$browser$Browser$element = _Browser_element;
 var $author$project$Main$Start = {$: 'Start'};
 var $author$project$Main$init = function (flags) {
 	return _Utils_Tuple2(
-		{current: $author$project$Main$Start},
+		{answerOne: $elm$core$Maybe$Nothing, currentPage: $author$project$Main$Start},
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
@@ -10667,76 +10667,49 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $author$project$Main$subscriptions = function (model) {
 	return $elm$core$Platform$Sub$none;
 };
+var $author$project$Main$update = F2(
+	function (msg, model) {
+		if (msg.$ === 'SetPage') {
+			var page = msg.a;
+			return _Utils_Tuple2(
+				_Utils_update(
+					model,
+					{currentPage: page}),
+				$elm$core$Platform$Cmd$none);
+		} else {
+			var answer = msg.a;
+			return _Utils_Tuple2(
+				_Utils_update(
+					model,
+					{
+						answerOne: $elm$core$Maybe$Just(answer)
+					}),
+				$elm$core$Platform$Cmd$none);
+		}
+	});
+var $author$project$Main$Lodz = {$: 'Lodz'};
+var $author$project$Main$Lublin = {$: 'Lublin'};
+var $author$project$Main$Ogniwo = {$: 'Ogniwo'};
 var $author$project$Main$QuestionFive = {$: 'QuestionFive'};
 var $author$project$Main$QuestionFour = {$: 'QuestionFour'};
 var $author$project$Main$QuestionOne = {$: 'QuestionOne'};
 var $author$project$Main$QuestionThree = {$: 'QuestionThree'};
 var $author$project$Main$QuestionTwo = {$: 'QuestionTwo'};
 var $author$project$Main$Results = {$: 'Results'};
-var $author$project$Main$update = F2(
-	function (msg, model) {
-		switch (msg.a.$) {
-			case 'Start':
-				var _v1 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$Start}),
-					$elm$core$Platform$Cmd$none);
-			case 'QuestionOne':
-				var _v2 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$QuestionOne}),
-					$elm$core$Platform$Cmd$none);
-			case 'QuestionTwo':
-				var _v3 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$QuestionTwo}),
-					$elm$core$Platform$Cmd$none);
-			case 'QuestionThree':
-				var _v4 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$QuestionThree}),
-					$elm$core$Platform$Cmd$none);
-			case 'QuestionFour':
-				var _v5 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$QuestionFour}),
-					$elm$core$Platform$Cmd$none);
-			case 'QuestionFive':
-				var _v6 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$QuestionFive}),
-					$elm$core$Platform$Cmd$none);
-			default:
-				var _v7 = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{current: $author$project$Main$Results}),
-					$elm$core$Platform$Cmd$none);
-		}
-	});
-var $author$project$Main$SetQuestion = function (a) {
-	return {$: 'SetQuestion', a: a};
+var $author$project$Main$SetAnswerOne = function (a) {
+	return {$: 'SetAnswerOne', a: a};
 };
+var $author$project$Main$SetPage = function (a) {
+	return {$: 'SetPage', a: a};
+};
+var $author$project$Main$Skra = {$: 'Skra'};
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$h4 = _VirtualDom_node('h4');
 var $elm$html$Html$label = _VirtualDom_node('label');
 var $elm$html$Html$Attributes$name = $elm$html$Html$Attributes$stringProperty('name');
 var $author$project$Main$view = function (model) {
-	var _v0 = model.current;
+	var _v0 = model.currentPage;
 	switch (_v0.$) {
 		case 'Start':
 			return A2(
@@ -10759,7 +10732,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$QuestionOne))
+								$author$project$Main$SetPage($author$project$Main$QuestionOne))
 							]),
 						_List_fromArray(
 							[
@@ -10811,7 +10784,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerOne($author$project$Main$Ogniwo))
 											]),
 										_List_Nil)
 									]))
@@ -10838,7 +10813,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerOne($author$project$Main$Lodz))
 											]),
 										_List_Nil)
 									]))
@@ -10865,7 +10842,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerOne($author$project$Main$Lublin))
 											]),
 										_List_Nil)
 									]))
@@ -10892,7 +10871,9 @@ var $author$project$Main$view = function (model) {
 										_List_fromArray(
 											[
 												$elm$html$Html$Attributes$name('q1'),
-												$elm$html$Html$Attributes$type_('radio')
+												$elm$html$Html$Attributes$type_('radio'),
+												$elm$html$Html$Events$onClick(
+												$author$project$Main$SetAnswerOne($author$project$Main$Skra))
 											]),
 										_List_Nil)
 									]))
@@ -10902,7 +10883,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$QuestionTwo))
+								$author$project$Main$SetPage($author$project$Main$QuestionTwo))
 							]),
 						_List_fromArray(
 							[
@@ -11045,7 +11026,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$QuestionThree))
+								$author$project$Main$SetPage($author$project$Main$QuestionThree))
 							]),
 						_List_fromArray(
 							[
@@ -11198,7 +11179,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$QuestionFour))
+								$author$project$Main$SetPage($author$project$Main$QuestionFour))
 							]),
 						_List_fromArray(
 							[
@@ -11351,7 +11332,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$QuestionFive))
+								$author$project$Main$SetPage($author$project$Main$QuestionFive))
 							]),
 						_List_fromArray(
 							[
@@ -11494,7 +11475,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$Results))
+								$author$project$Main$SetPage($author$project$Main$Results))
 							]),
 						_List_fromArray(
 							[
@@ -11532,7 +11513,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick(
-								$author$project$Main$SetQuestion($author$project$Main$Start))
+								$author$project$Main$SetPage($author$project$Main$Start))
 							]),
 						_List_fromArray(
 							[
@@ -11544,7 +11525,7 @@ var $author$project$Main$view = function (model) {
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{init: $author$project$Main$init, subscriptions: $author$project$Main$subscriptions, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
-	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"SetQuestion":["Main.Quiz"]}},"Main.Quiz":{"args":[],"tags":{"Start":[],"QuestionOne":[],"QuestionTwo":[],"QuestionThree":[],"QuestionFour":[],"QuestionFive":[],"Results":[]}}}}})}});
+	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Main.Msg","aliases":{},"unions":{"Main.Msg":{"args":[],"tags":{"SetPage":["Main.Page"],"SetAnswerOne":["Main.AnswerOne"]}},"Main.AnswerOne":{"args":[],"tags":{"Ogniwo":[],"Lodz":[],"Lublin":[],"Skra":[]}},"Main.Page":{"args":[],"tags":{"Start":[],"QuestionOne":[],"QuestionTwo":[],"QuestionThree":[],"QuestionFour":[],"QuestionFive":[],"Results":[]}}}}})}});
 
 //////////////////// HMR BEGIN ////////////////////
 

@@ -5915,6 +5915,11 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: black;
+}
+
+.label:hover {
+    color: grey;
 }
 
 input {
